@@ -1,19 +1,23 @@
+/*adding tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* 
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
  #map {
-  width: 50%;
+  width: 100%;
   height: 50%;
 }
 
 #map2 {
-  width: 50%;
+  width: 100%;
   height: 50%;
 }
 
 #map3 {
-  width: 50%;
+  width: 100%;
   height: 50%;
 }
 /* 
