@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Add Map</title>
+    <title>Top 5 Peak District Locations</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link href="/dist/output.css" rel="stylesheet">
@@ -18,7 +18,7 @@
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Top 10 Peak District Locations</h2>
+          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Top 5 Peak District Locations</h2>
           <p class="mt-6 text-lg leading-8 text-gray-300">Check out these must-visit locations when looking for Peak District Destinations!</p>
         </div>
       </div>
@@ -26,18 +26,35 @@
     </div>
 
   </header>
-  <body>
+  <body class="bg-gray-900">
+    
     <!--The div element for the map -->
     <div class="container mx-auto">
       <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Mam Tor</h2>
-      <div id="map"></div>
+      <div class="rounded-3xl" id="map"></div>
       <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Castleton</h2>
-      <div id="map2"></div>
+      <div class="rounded-3xl" id="map2"></div>
       <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Kinder Downfall</h2>
-      <div id="map3"></div>
+      <div class="rounded-3xl" id="map3"></div>
     </div>
     <!-- prettier-ignore -->
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyA7Wvwogwtvk9Xc8jF8ZsF3LUTtDdKwEWQ", v: "beta"});</script>
   </body>
+  <footer class="mt-6">
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      
+      <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+        <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:mx-0"></div>
+        <p class="mt-6 text-lg text-center leading-8 text-gray-300">Thanks for reading and good look on your trip!</p>
+        <p class="mt-6 text-lg text-center leading-8 text-gray-300">copyright © 2023, All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </html>
