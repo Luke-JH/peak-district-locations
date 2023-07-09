@@ -2,21 +2,21 @@
 let map;
 
 async function initMap() {
-  // The location of Uluru
+  // The location of Mam Tor
   const position = { lat: 53.349940416635626, lng: -1.809374709678355 };
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at Mam Tor
   map = new Map(document.getElementById("map"), {
     zoom: 14,
     center: position,
     mapId: "Mam Tor",
   });
 
-  // The marker, positioned at Uluru
+  // The marker, positioned at Mam Tor
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
@@ -35,39 +35,39 @@ async function initMap2() {
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   
-    // The map, centered at Uluru
+    // The map, centered at Castleton
     map = new Map(document.getElementById("map2"), {
       zoom: 14,
       center: position,
       mapId: "Castleton",
     });
   
-    // The marker, positioned at Uluru
+    // The marker, positioned at Castleton
     const marker = new AdvancedMarkerElement({
       map: map,
       position: position,
-      title: "somewhere",
+      title: "Castleton",
     });
   }
   initMap2();
 
   //my third map
 async function initMap3() {
-  // The location of Castleton
+  // The location of Kinder Downfall
   const position = { lat:   53.3989805001796, lng: -1.8764972519399676 };
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at Kinder Downfall
   map = new Map(document.getElementById("map3"), {
     zoom: 14,
     center: position,
     mapId: "Kinder Downfall",
   });
 
-  // The marker, positioned at Uluru
+  // The marker, positioned at Kinder Downfall
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
