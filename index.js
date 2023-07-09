@@ -75,3 +75,53 @@ async function initMap3() {
   });
 }
 initMap3();
+
+  //my fourth map
+async function initMap4() {
+  // The location of Buxton
+  const position = { lat:   53.25741225319158, lng: -1.9162775987474543 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Buxton
+  map = new Map(document.getElementById("map4"), {
+    zoom: 14,
+    center: position,
+    mapId: "Buxton",
+  });
+
+  // The marker, positioned at Buxton
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Buxton",
+  });
+}
+initMap4();
+
+  //my fifth map
+async function initMap5() {
+  // The location of Bamford Edge
+  const position = { lat:   53.36133206805208, lng: -1.6895926419020213 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Bamford Edge
+  map = new Map(document.getElementById("map5"), {
+    zoom: 14,
+    center: position,
+    mapId: "Bamford Edge",
+  });
+
+  // The marker, positioned at Bamford Edge
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Bamford Edge",
+  });
+}
+initMap5();
