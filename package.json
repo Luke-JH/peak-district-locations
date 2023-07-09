@@ -5,6 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "echo 'Please start live server' && npx tailwindcss -i style.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i style.css -o ./dist/output.css && cp index.html dist/index.html && cp index.js dist/index.js && echo https://www.peakdistrictlocations.com/ > ./dist/CNAME"
+    "build": "npx tailwindcss -i style.css -o ./dist/output.css && cp index.html dist/index.html && cp index.js dist/index.js && echo www.peakdistrictlocations.com > ./dist/CNAME"
   }
 }
