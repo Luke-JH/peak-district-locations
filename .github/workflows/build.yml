@@ -1,4 +1,4 @@
-name: deploy
+name: build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  build:
 
     runs-on: ubuntu-latest
 
