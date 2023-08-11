@@ -742,6 +742,11 @@ video {
   height: 50%;
 }
 
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* 
  * Optional: Makes the sample page fill the window. 
  */
