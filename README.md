@@ -9,25 +9,11 @@ This project utilizes Tailwind CSS and the Google Maps JavaScript API to display
 
 ## Installation
 
-1. Clone the repository:
-
 ```bash
-git clone https://github.com/luke-jh/peak-district-locations.git
+npm ci
 ```
 
-2. Navigate to the project directory:
-
-```bash
-cd peak-district-locations
-```
-
-3. Install the dependencies:
-
-```bash
-npm install
-```
-
-4. Set up Google Maps API Key:
+## Set up Google Maps API Key:
 
    - Obtain a Google Maps API key by following the instructions in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
    - Replace `'YOUR_API_KEY'` with your actual API key in the `index.html` file:
@@ -36,13 +22,13 @@ npm install
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 ```
 
-5. Build and run the project:
+## Build and run the project:
 
 ```bash
 npm run build
 ```
 
-6. Open the `index.html` file in your browser.
+Open the `index.html` file in your browser.
 
 ## Usage
 
