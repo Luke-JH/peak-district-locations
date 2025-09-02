@@ -1,10 +1,21 @@
 {
-  "devDependencies": {
-    "replace-in-file": "^7.0.1",
-    "tailwindcss": "^3.3.2"
-  },
-  "scripts": {
-    "dev": "echo 'Please start live server' && npx tailwindcss -i style.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -i style.css -o ./dist/output.css && cp index.html dist/index.html && cp index.js dist/index.js &&  node ./replace-html.js"
-  }
+    "scripts": {
+        "dev": "echo 'Please start live server' && npx tailwindcss -i style.css -o ./dist/output.css --watch",
+        "build": "npx tailwindcss -i style.css -o ./dist/output.css && cp index.html dist/index.html && cp index.js dist/index.js &&  node ./replace-html.js",
+        "lint": "eslint .",
+        "lint-fix": "eslint . --fix --ignore-pattern .gitignore",
+        "prettier": "prettier . --check",
+        "prettier-fix": "prettier . --write",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "@eslint/css": "^0.10.0",
+        "@eslint/js": "^9.34.0",
+        "@eslint/json": "^0.13.2",
+        "eslint": "^9.34.0",
+        "globals": "^16.3.0",
+        "prettier": "^3.6.2",
+        "replace-in-file": "^7.0.1",
+        "tailwindcss": "^3.3.2"
+    }
 }
