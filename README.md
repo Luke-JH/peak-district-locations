@@ -15,8 +15,8 @@ npm ci
 
 ## Set up Google Maps API Key:
 
-   - Obtain a Google Maps API key by following the instructions in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
-   - Replace `'YOUR_API_KEY'` with your actual API key in the `index.html` file:
+- Obtain a Google Maps API key by following the instructions in the [Google Maps JavaScript API documentation](https://developers.google.com/maps/documentation/javascript/get-api-key).
+- Replace `'YOUR_API_KEY'` with your actual API key in the `index.html` file:
 
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>

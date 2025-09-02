@@ -1,77 +1,222 @@
 <html>
-  <head>
-    <title>Top 5 Peak District Locations</title>
-    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0"></script>
-		<meta charset="UTF-8">
-    <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/compass.svg>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="The best places to visit in the Peak District">
-		<meta name="keywords" content="hike, hiking, trails">
-    <link href="/dist/output.css" rel="stylesheet">
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body class="bg-gray-900">
-    <header>
-  
-      <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        
-        <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Top 5 Peak District Locations</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Check out these must-visit locations when looking for Peak District Destinations!</p>
-          </div>
-        </div>
-  
-      </div>
-  
-    </header>
-    
-    <!--The div element for the maps -->
-    <div class="container mx-auto">
-      <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Mam Tor</h2>
-      <div class="rounded-3xl" id="map"></div>
-      <p class="mt-8 text-lg text-white mb-20">Mam Tor, also known as the 'Mother Hill', is a 517 m (1,696 ft) peak, located near Castleton. You can hike it or mountain bike it using the trail along the ridge line. Its close proximity to Castleton means you can stay there overnight, and get food from the pubs. In terms of parking, there is minimal parking available nearby, so you may want to park further down the hill at the Rushup Edge car park.</p>
+    <head>
+        <title>Top 5 Peak District Locations</title>
+        <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0"></script>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/compass.svg"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="The best places to visit in the Peak District" />
+        <meta name="keywords" content="hike, hiking, trails" />
+        <link href="/dist/output.css" rel="stylesheet" />
+        <script type="module" src="./index.js"></script>
+    </head>
+    <body class="bg-gray-900">
+        <header>
+            <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <div
+                    class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                        style="
+                            clip-path: polygon(
+                                74.1% 44.1%,
+                                100% 61.6%,
+                                97.5% 26.9%,
+                                85.5% 0.1%,
+                                80.7% 2%,
+                                72.5% 32.5%,
+                                60.2% 62.4%,
+                                52.4% 68.1%,
+                                47.5% 58.3%,
+                                45.2% 34.5%,
+                                27.5% 76.7%,
+                                0.1% 64.9%,
+                                17.9% 100%,
+                                27.6% 76.8%,
+                                76.1% 97.7%,
+                                74.1% 44.1%
+                            );
+                        "
+                    ></div>
+                </div>
+                <div
+                    class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                        style="
+                            clip-path: polygon(
+                                74.1% 44.1%,
+                                100% 61.6%,
+                                97.5% 26.9%,
+                                85.5% 0.1%,
+                                80.7% 2%,
+                                72.5% 32.5%,
+                                60.2% 62.4%,
+                                52.4% 68.1%,
+                                47.5% 58.3%,
+                                45.2% 34.5%,
+                                27.5% 76.7%,
+                                0.1% 64.9%,
+                                17.9% 100%,
+                                27.6% 76.8%,
+                                76.1% 97.7%,
+                                74.1% 44.1%
+                            );
+                        "
+                    ></div>
+                </div>
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="mx-auto max-w-2xl lg:mx-0">
+                        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+                            Top 5 Peak District Locations
+                        </h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                            Check out these must-visit locations when looking for Peak District
+                            Destinations!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-      <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Castleton</h2>
-      <div class="rounded-3xl" id="map2"></div>
-      <p class="mt-8 text-lg text-white mb-20">Castleton, famous for its caves, is a town with plenty to do. There is lots of parking and many places to eat. You can use the town as a base to explore the caves, maybe visit Mam Tor and hike some of the other surrounding hills, and accommodation is available as well.</p>
-      
-      <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Kinder Downfall</h2>
-      <div class="rounded-3xl" id="map3"></div>
-      <p class="mt-8 text-lg text-white mb-20">Kinder Downfall is a mighty waterfall located on the top of the Kinder Scout ridgeline. For maximum views, try to go after it has been raining a lot, not during a heatwave :) Parking is available all around the ridgeline in various places, including the small town of Hayfield, and the even smaller town of Little Hayfield. On Kinder Road, you can find a camp site, public toilets and a car park which sometimes has a food truck. There are also a couple of pubs further into Hayfield.</p>
-      
-      <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Buxton</h2>
-      <div class="rounded-3xl" id="map4"></div>
-      <p class="mt-8 text-lg text-white mb-20">Buxton is another town which makes a great day trip. It has plenty of car parking and green/park space, as well as the historic architecture and surrounding views. There are also lots of shops and pubs available to keep you going :)</p>
-      
-      <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">Bamford Edge</h2>
-      <div class="rounded-3xl" id="map5"></div>
-      <p class="mt-8 text-lg text-white mb-20">Bamford Edge is located right next to Ladybower Reservoir. This makes for amazing views, especially sunsets and sunrises. Although it isn't one to stop off at all day, you can park in the Heatherdene car park at the bottom of the hill and stop off for some food (you'll need to take your own), use the public toilets, and make the short but steep hike to the top of the hill. There are also a couple of pubs nearby.</p>
-    </div>
-    <!-- prettier-ignore -->
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        <!--The div element for the maps -->
+        <div class="container mx-auto">
+            <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">
+                Mam Tor
+            </h2>
+            <div class="rounded-3xl" id="map"></div>
+            <p class="mt-8 text-lg text-white mb-20">
+                Mam Tor, also known as the 'Mother Hill', is a 517 m (1,696 ft) peak, located near
+                Castleton. You can hike it or mountain bike it using the trail along the ridge line.
+                Its close proximity to Castleton means you can stay there overnight, and get food
+                from the pubs. In terms of parking, there is minimal parking available nearby, so
+                you may want to park further down the hill at the Rushup Edge car park.
+            </p>
+
+            <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">
+                Castleton
+            </h2>
+            <div class="rounded-3xl" id="map2"></div>
+            <p class="mt-8 text-lg text-white mb-20">
+                Castleton, famous for its caves, is a town with plenty to do. There is lots of
+                parking and many places to eat. You can use the town as a base to explore the caves,
+                maybe visit Mam Tor and hike some of the other surrounding hills, and accommodation
+                is available as well.
+            </p>
+
+            <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">
+                Kinder Downfall
+            </h2>
+            <div class="rounded-3xl" id="map3"></div>
+            <p class="mt-8 text-lg text-white mb-20">
+                Kinder Downfall is a mighty waterfall located on the top of the Kinder Scout
+                ridgeline. For maximum views, try to go after it has been raining a lot, not during
+                a heatwave :) Parking is available all around the ridgeline in various places,
+                including the small town of Hayfield, and the even smaller town of Little Hayfield.
+                On Kinder Road, you can find a camp site, public toilets and a car park which
+                sometimes has a food truck. There are also a couple of pubs further into Hayfield.
+            </p>
+
+            <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">
+                Buxton
+            </h2>
+            <div class="rounded-3xl" id="map4"></div>
+            <p class="mt-8 text-lg text-white mb-20">
+                Buxton is another town which makes a great day trip. It has plenty of car parking
+                and green/park space, as well as the historic architecture and surrounding views.
+                There are also lots of shops and pubs available to keep you going :)
+            </p>
+
+            <h2 class="text-4xl mt-6 mb-4 font-bold tracking-tight text-white sm:text-6xl">
+                Bamford Edge
+            </h2>
+            <div class="rounded-3xl" id="map5"></div>
+            <p class="mt-8 text-lg text-white mb-20">
+                Bamford Edge is located right next to Ladybower Reservoir. This makes for amazing
+                views, especially sunsets and sunrises. Although it isn't one to stop off at all
+                day, you can park in the Heatherdene car park at the bottom of the hill and stop off
+                for some food (you'll need to take your own), use the public toilets, and make the
+                short but steep hike to the top of the hill. There are also a couple of pubs nearby.
+            </p>
+        </div>
+        <!-- prettier-ignore -->
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
         ({key: "AIzaSyA7Wvwogwtvk9Xc8jF8ZsF3LUTtDdKwEWQ", v: "beta"});</script>
-    <footer class="mt-6">
-      <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-        
-        <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-          <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-        </div>
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0"></div>
-          <p class="mt-6 text-lg text-center leading-8 text-gray-300">Thanks for reading and good look on your trip!</p>
-          <p class="mt-6 text-lg text-center leading-8 text-gray-300">copyright © 2023, All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  </body>
+        <footer class="mt-6">
+            <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+                <div
+                    class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                        style="
+                            clip-path: polygon(
+                                74.1% 44.1%,
+                                100% 61.6%,
+                                97.5% 26.9%,
+                                85.5% 0.1%,
+                                80.7% 2%,
+                                72.5% 32.5%,
+                                60.2% 62.4%,
+                                52.4% 68.1%,
+                                47.5% 58.3%,
+                                45.2% 34.5%,
+                                27.5% 76.7%,
+                                0.1% 64.9%,
+                                17.9% 100%,
+                                27.6% 76.8%,
+                                76.1% 97.7%,
+                                74.1% 44.1%
+                            );
+                        "
+                    ></div>
+                </div>
+                <div
+                    class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                        style="
+                            clip-path: polygon(
+                                74.1% 44.1%,
+                                100% 61.6%,
+                                97.5% 26.9%,
+                                85.5% 0.1%,
+                                80.7% 2%,
+                                72.5% 32.5%,
+                                60.2% 62.4%,
+                                52.4% 68.1%,
+                                47.5% 58.3%,
+                                45.2% 34.5%,
+                                27.5% 76.7%,
+                                0.1% 64.9%,
+                                17.9% 100%,
+                                27.6% 76.8%,
+                                76.1% 97.7%,
+                                74.1% 44.1%
+                            );
+                        "
+                    ></div>
+                </div>
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="mx-auto max-w-2xl lg:mx-0"></div>
+                    <p class="mt-6 text-lg text-center leading-8 text-gray-300">
+                        Thanks for reading and good look on your trip!
+                    </p>
+                    <p class="mt-6 text-lg text-center leading-8 text-gray-300">
+                        copyright © 2023, All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

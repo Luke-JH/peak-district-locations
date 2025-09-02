@@ -15,38 +15,38 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
 
-      - name: Install Packages
-        run: npm ci
+            - name: Install Packages
+              run: npm ci
 
-      - name: Build
-        run: npm run build
+            - name: Build
+              run: npm run build
 
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+            - name: Upload Artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: ./dist
 
-  deploy:
-    if: github.ref == 'refs/heads/main' # Only run on main branch
-    needs: build
-    # Deploy to the github_pages environment
-    environment:
-      name: github_pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    deploy:
+        if: github.ref == 'refs/heads/main' # Only run on main branch
+        needs: build
+        # Deploy to the github_pages environment
+        environment:
+            name: github_pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        # Specify runner + deployment step
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
