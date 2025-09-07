@@ -1,3 +1,5 @@
+import "./maps-loader.js";
+
 // Initialize and add the map
 let map;
 
