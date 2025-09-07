@@ -26,6 +26,9 @@ jobs:
               with:
                   node-version: "20"
 
+            - name: Clean any cached builds
+              run: rm -rf node_modules/.vite dist
+
             - name: Install Packages
               run: npm ci
 
