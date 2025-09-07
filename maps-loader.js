@@ -32,4 +32,4 @@
     d[l]
         ? console.warn(p + " only loads once. Ignoring:", g)
         : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
-})({ key: "AIzaSyA7Wvwogwtvk9Xc8jF8ZsF3LUTtDdKwEWQ", v: "beta" });
+})({ key: import.meta.env.VITE_GOOGLE_MAPS_API_KEY, v: "beta" });
