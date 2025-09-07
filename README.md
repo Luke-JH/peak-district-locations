@@ -24,10 +24,6 @@ cp .env.example .env
 
 - Paste your API key into the `.env` file
 
-```html
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-```
-
 ## Build the project:
 
 ```bash
